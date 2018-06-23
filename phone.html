@@ -28,7 +28,11 @@
 }
 </style>
 <div ng-if="item.type === TYPES.PHONE" class="item-entity-container">
-	<div class="item-entity"> <div class="item-entity--icon mdi mdi-phone">
+	<div class="item-entity"> 
+		<div class="item-entity--icon mdi mdi-phone"></div>
+		 <div class="item-phone-mode" ng-if="entity.attributes.callerid">
+            <span ng-bind="entity.attributes.callerid"></span>
+         </div>
 	</div>
 </div>
 ~          
